@@ -1,0 +1,12 @@
+services:
+  matchgame:
+    image: matchgame:latest
+    build: .
+  nginx:
+    image: nginx:latest
+    ports:
+      - 711:711
+    volumes:
+      - ./matchgame/nginx/html:/usr/share/nginx/html
+      - ./matchgame/nginx/nginx.conf:/etc/nginx/nginx.conf
+    privileged: true
