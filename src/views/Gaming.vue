@@ -1,25 +1,26 @@
 <template>
-    <div class="status-box"> Gaming </div>
-    <el-button class="add-match-button" @click=changeCount(true)> ADD </el-button>
-    <el-text class="match-count">{{ matchCount }}</el-text>
-    <el-button class="reduce-match-button" @click=changeCount(false)> REDUCE </el-button>
-    <el-button class="goto-gaming-button" @click=goToFinish> goToFinish </el-button>
+    <div class="rest-match-box"> 剩余火柴{{ matchCount }} </div>
+    <template v-for="index in 5">
+        <el-button class="choose-num-button" @click=chooseNum(index)> {{ index }} </el-button>
+    </template>
+    <el-button class="goto-finish-button" v-if="showGoToButton" @click=goToFinish> goToFinish </el-button>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter, onBeforeRouteUpdate } from 'vue-router'// 导入路由
+import { useRouter, useRoute } from 'vue-router'// 导入路由
 
 const router = useRouter()
-const matchCount = ref(0)
+const route = useRoute()
+const matchCount = ref(route.query.matchcount)
 const nieniewin = ref(true)
+const showGoToButton = ref(true)
 
-const changeCount = (isAdd) => {
-    if (!isAdd) {
-        if(matchCount.value > 0) matchCount.value--
-    } else {
-        if(matchCount.value < 30) matchCount.value++
-    }
+const chooseNum = (matchNum) => {
+
+}
+const judgeGame = () => {
+
 }
 const goToFinish = () => {
     router.push({
@@ -31,17 +32,12 @@ const goToFinish = () => {
 }
 </script>
 
-
 <style scoped>
-.status-box {
+.rest-match-box {
     background-color: brown;
     height: 100px;
-    width: 100px;
+    width: 100%;
 }
-.add-match-button {
-}
-.reduce-match-button {
-}
-.goto-gaming-button {
-}
+.choose-num-button {}
+.goto-finish-button {}
 </style>
