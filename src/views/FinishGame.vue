@@ -18,7 +18,6 @@ const goToInit = () => {
 }
 </script>
 
-
 <style scoped>
 .status-box {
     background-color: brown;
