@@ -1,27 +1,16 @@
 <template>
-    <div class="status-box"> FinishGame </div>
-    <el-button class="add-match-button" @click=changeCount(true)> ADD </el-button>
-    <el-text class="match-count">{{ matchCount }}</el-text>
-    <el-button class="reduce-match-button" @click=changeCount(false)> REDUCE </el-button>
-    <el-button class="goto-gaming-button" @click=goToInit> goToInit </el-button>
+    <div class="status-box"> 赢了！ </div>
+    <el-button class="goto-init-button" @click=goToInit> goToInit </el-button>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter, onBeforeRouteUpdate } from 'vue-router'// 导入路由
+import { useRouter, useRoute } from 'vue-router'// 导入路由
 
 const router = useRouter()
-const matchCount = ref(0)
-// defineProps({
-//   msg: String,
-// })
-const changeCount = (isAdd) => {
-    if (!isAdd) {
-        if(matchCount.value > 0) matchCount.value--
-    } else {
-        if(matchCount.value < 30) matchCount.value++
-    }
-}
+const route = useRoute()
+const nieniewin = ref(route.query.nieniewin)
+
 const goToInit = () => {
     router.push({
         path: "/initgame"
@@ -36,10 +25,6 @@ const goToInit = () => {
     height: 100px;
     width: 100px;
 }
-.add-match-button {
-}
-.reduce-match-button {
-}
-.goto-gaming-button {
-}
+
+.goto-init-button {}
 </style>

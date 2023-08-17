@@ -38,6 +38,8 @@ const goToFinish = () => {
     height: 100px;
     width: 100%;
 }
+
 .choose-num-button {}
+
 .goto-finish-button {}
 </style>
