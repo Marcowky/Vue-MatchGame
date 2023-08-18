@@ -1,15 +1,17 @@
 <template>
-    <div class="status-box"> 赢了！ </div>
-    <el-button class="goto-init-button" @click=goToInit> goToInit </el-button>
+    <div class="info-box">
+        <div class="status-box"> 赢了！ </div>
+    </div>
+    <div class="func-box">
+        <el-button class="goto-init-button" @click=goToInit> goToInit </el-button>
+    </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter, useRoute } from 'vue-router'// 导入路由
+import { router } from '../routes/router'// 导入路由
 
-const router = useRouter()
-const route = useRoute()
-const nieniewin = ref(route.query.nieniewin)
+const nieniewin = ref(router.currentRoute.value.query.nieniewin)
 
 const goToInit = () => {
     router.push({
@@ -19,6 +21,8 @@ const goToInit = () => {
 </script>
 
 <style scoped>
+@import "../styles/mainLayout.css";
+
 .status-box {
     background-color: brown;
     height: 100px;

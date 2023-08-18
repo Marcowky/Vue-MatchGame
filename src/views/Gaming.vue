@@ -1,21 +1,23 @@
 <template>
-    <div class="rest-match-box"> 剩余火柴{{ matchCount }} </div>
-    <template v-for="index in 5">
-        <el-button class="choose-num-button" @click=chooseNum(index)> {{ index }} </el-button>
-    </template>
-    <div class="rest-match-box"> 捏捏火柴数{{ nienieCount }} </div>
-    <div class="rest-match-box"> 呢呢火柴数{{ neneCount }} </div>
-    <el-button class="goto-finish-button" v-if="showGoToButton" @click=goToFinish> goToFinish </el-button>
+    <div class="info-box">
+        <div class="rest-match-box"> 剩余火柴{{ matchCount }} </div>
+        <template v-for="index in 5">
+            <el-button class="choose-num-button" @click=chooseNum(index)> {{ index }} </el-button>
+        </template>
+    </div>
+    <div class="func-box">
+        <div class="rest-match-box"> 捏捏火柴数{{ nienieCount }} </div>
+        <div class="rest-match-box"> 呢呢火柴数{{ neneCount }} </div>
+        <el-button class="goto-finish-button" v-if="showGoToButton" @click=goToFinish> goToFinish </el-button>
+    </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter, useRoute } from 'vue-router'// 导入路由
+import { router } from '../routes/router'// 导入路由
 
-const router = useRouter()
-const route = useRoute()
-const matchCount = ref(route.query.matchcount)
-const nienieTurn = ref(route.query.nieniestart)
+const matchCount = ref(router.currentRoute.value.query.matchcount)
+const nienieTurn = ref(router.currentRoute.value.query.nieniestart)
 const nienieCount = ref(0)
 const neneCount = ref(0)
 const nieniewin = ref(true)
@@ -57,6 +59,8 @@ const goToFinish = () => {
 </script>
 
 <style scoped>
+@import "../styles/mainLayout.css";
+
 .rest-match-box {
     background-color: brown;
     height: 100px;

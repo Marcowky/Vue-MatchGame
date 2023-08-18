@@ -1,19 +1,22 @@
 <template>
-    <div class="please-choose-box"> 请选择火柴数目 </div>
-    <el-button class="add-match-button" @click=changeCount(true)> ADD </el-button>
-    <el-text class="match-count">{{ matchCount }}</el-text>
-    <el-button class="reduce-match-button" @click=changeCount(false)> REDUCE </el-button>
-    <div class="who-first-box"> 谁先取 </div>
-    <el-button class="nienie-first-button" @click=chooseFirst(true)> nienie </el-button>
-    <el-button class="nene-first-button" @click=chooseFirst(false)> nene </el-button>
-    <el-button class="goto-gaming-button" v-if="showGoToButton" @click=goToGaming> goToGaming </el-button>
+    <div class="info-box">
+        <div class="please-choose-box"> 请选择火柴数目 </div>
+        <el-button class="add-match-button" @click=changeCount(true)> ADD </el-button>
+        <el-text class="match-count">{{ matchCount }}</el-text>
+        <el-button class="reduce-match-button" @click=changeCount(false)> REDUCE </el-button>
+    </div>
+    <div class="func-box">
+        <div class="who-first-box"> 谁先取 </div>
+        <el-button class="nienie-first-button" @click=chooseFirst(true)> nienie </el-button>
+        <el-button class="nene-first-button" @click=chooseFirst(false)> nene </el-button>
+        <el-button class="goto-gaming-button" v-if="showGoToButton" @click=goToGaming> goToGaming </el-button>
+    </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'// 导入路由
+import { router } from '../routes/router'// 导入路由
 
-const router = useRouter()
 const matchCount = ref(15)
 const nieniestart = ref(true)
 const showGoToButton = ref(false)
@@ -41,6 +44,8 @@ const goToGaming = () => {
 </script>
 
 <style scoped>
+@import "../styles/mainLayout.css";
+
 .please-choose-box {
     background-color: brown;
     height: 100px;
@@ -53,6 +58,7 @@ const goToGaming = () => {
     width: 100%;
 }
 
+
 .add-match-button {}
 
 .reduce-match-button {}
@@ -61,4 +67,5 @@ const goToGaming = () => {
 
 .nienie-first-button {}
 
-.nene-first-button {}</style>
+.nene-first-button {}
+</style>
