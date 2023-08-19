@@ -24,17 +24,17 @@
 }
 
 .big-text {
-    font-family: 'MyFont';
+    /* font-family: 'MyFont'; */
     font-size: 40px;
 }
 
 .middle-text {
-    font-family: 'MyFont';
+    /* font-family: 'MyFont'; */
     font-size: 30px;
 }
 
 .small-text {
-    font-family: 'MyFont';
+    /* font-family: 'MyFont'; */
     font-size: 20px;
 }
 
