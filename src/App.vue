@@ -21,7 +21,7 @@
 }
 
 .context-box {
-  position: fixed;
+  position: absolute;
   top: 30%;
   width: 100%;
   background-image: url("./assets/images/context.png");
@@ -30,7 +30,7 @@
 }
 
 .tltle {
-  position: fixed;
+  position: absolute;
   top: 8%;
   width: 300px;
   height: 163px;
@@ -40,7 +40,7 @@
 }
 
 .footbar {
-  position: fixed;
+  position: absolute;
   bottom: 0%;
   width: 400px;
   height: 50px;
