@@ -1,9 +1,9 @@
-/* @font-face {
+@font-face {
     font-family: 'MyFont';
     src: url('../fonts/FZSJ-MIAOWANGT.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
-} */
+}
 
 .info-box {
     height: 50%;
@@ -24,19 +24,19 @@
 }
 
 .big-text {
-    /* font-family: 'MyFont'; */
+    font-family: 'MyFont';
     font-size: 40px;
     color: #634f3b;
 }
 
 .middle-text {
-    /* font-family: 'MyFont'; */
+    font-family: 'MyFont';
     font-size: 30px;
     color: #634f3b;
 }
 
 .small-text {
-    /* font-family: 'MyFont'; */
+    font-family: 'MyFont';
     font-size: 20px;
     color: #634f3b;
 }

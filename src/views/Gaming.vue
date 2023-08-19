@@ -42,7 +42,6 @@ const nieniewin = ref(1)
 const showGoToButton = ref(false)
 
 const chooseNum = (matchNum) => {
-    console.log(router.currentRoute.value.query.nieniestart)
     if (matchCount.value - matchNum <= 0) {
         addNum(matchCount.value)
         matchCount.value = 0
@@ -79,8 +78,6 @@ const goToFinish = () => {
 </script>
 
 <style scoped>
-@import "../assets/css/style.css";
-
 .rest-match-box {
     margin: 10px;
 }

@@ -68,8 +68,6 @@ const goToGaming = () => {
 </script>
 
 <style scoped>
-@import "../assets/css/style.css";
-
 .please-choose-box {
     /* background-color:cornflowerblue; */
     margin: 10px;

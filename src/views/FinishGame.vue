@@ -27,5 +27,4 @@ const goToInit = () => {
 </script>
  
 <style scoped>
-@import "../assets/css/style.css";
 </style>
