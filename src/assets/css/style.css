@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('../fonts/FZSJ-MIAOWANGT.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.info-box {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.func-box {
+    /* height: 50%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.big-text {
+    font-family: 'MyFont';
+    font-size: 40px;
+}
+
+.middle-text {
+    font-family: 'MyFont';
+    font-size: 30px;
+}
+
+.small-text {
+    font-family: 'MyFont';
+    font-size: 20px;
+}
+
+.small-button {
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/small-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    line-height: 20;
+}
+
+.small-button:active {
+    background-image: url('../images/small-button-press.png');
+}
+
+.small-button-text {
+    margin-bottom: 5px; 
+}
+
+.big-button {
+    width: 250px;
+    height: 70px;
+    background-image: url('../images/big-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+
+.big-button:active {
+    background-image: url('../images/big-button-press.png');
+}
+
+.big-button-text {
+    margin-bottom: 10px; 
+}

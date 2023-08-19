@@ -1,15 +1,29 @@
 <template>
     <div class="info-box">
-        <div class="please-choose-box"> 请选择火柴数目 </div>
-        <el-button class="add-match-button" @click=changeCount(true)> ADD </el-button>
-        <el-text class="match-count">{{ matchCount }}</el-text>
-        <el-button class="reduce-match-button" @click=changeCount(false)> REDUCE </el-button>
+        <div class="please-choose-box">
+            <el-text class="big-text">选择火柴数目!</el-text>
+        </div>
+        <div class="match-choose-box">
+            <el-button class="small-button" @click=changeCount(false)>
+                <el-text class="small-button-text middle-text">-</el-text>
+            </el-button>
+            <el-text class="middle-text">{{ matchCount }}</el-text>
+            <el-button class="small-button" @click=changeCount(true)>
+                <el-text class="small-button-text middle-text">+</el-text>
+            </el-button>
+        </div>
     </div>
     <div class="func-box">
-        <div class="who-first-box"> 谁先取 </div>
-        <el-button class="nienie-first-button" @click=chooseFirst(true)> nienie </el-button>
-        <el-button class="nene-first-button" @click=chooseFirst(false)> nene </el-button>
-        <el-button class="goto-gaming-button" v-if="showGoToButton" @click=goToGaming> goToGaming </el-button>
+        <div class="who-first-box">
+            <el-text class="middle-text">WHO'S FIRST?</el-text>
+        </div>
+        <div>
+            <el-button class="nienie-first-button" @click=chooseFirst(true)> nienie </el-button>
+            <el-button class="nene-first-button" @click=chooseFirst(false)> nene </el-button>
+        </div>
+        <el-button class="big-button" v-if="showGoToButton" @click=goToGaming>
+            <el-text class="big-button-text middle-text"> 开始游戏! </el-text>
+        </el-button>
     </div>
 </template>
 
@@ -44,20 +58,29 @@ const goToGaming = () => {
 </script>
 
 <style scoped>
-@import "../styles/mainLayout.css";
+@import "../assets/css/style.css";
 
 .please-choose-box {
     background-color: brown;
     height: 100px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .who-first-box {
     background-color: brown;
     height: 100px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
+.match-choose-box {}
 
 .add-match-button {}
 

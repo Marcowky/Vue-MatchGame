@@ -1,14 +1,31 @@
 <template>
     <div class="info-box">
-        <div class="rest-match-box"> 剩余火柴{{ matchCount }} </div>
-        <template v-for="index in 5">
-            <el-button class="choose-num-button" @click=chooseNum(index)> {{ index }} </el-button>
-        </template>
+        <div class="rest-match-box">
+            <el-text class="big-text"> 剩余火柴{{ matchCount }}根 </el-text>
+        </div>
+        <div class="rest-match-box">
+            <el-text class="middle-text"> 捏捏{{ nienieCount }} </el-text>
+            <el-text class="middle-text"> 呢呢{{ neneCount }} </el-text>
+        </div>
+
+
     </div>
     <div class="func-box">
-        <div class="rest-match-box"> 捏捏火柴数{{ nienieCount }} </div>
-        <div class="rest-match-box"> 呢呢火柴数{{ neneCount }} </div>
-        <el-button class="goto-finish-button" v-if="showGoToButton" @click=goToFinish> goToFinish </el-button>
+        <div class="rest-match-box"></div>
+        <div class="rest-match-box">
+            <el-text class="middle-text"> 捏捏 </el-text>
+            <el-text class="middle-text"> 呢呢 </el-text>
+        </div>
+        <div>
+            <template v-for="index in 5">
+                <el-button class="small-button" @click=chooseNum(index)>
+                    <el-text class="small-button-text middle-text"> {{ index }} </el-text>
+                </el-button>
+            </template>
+        </div>
+        <el-button class="big-button" v-if="showGoToButton" @click=goToFinish>
+            <el-text class="big-button-text middle-text"> 游戏结束! </el-text>
+        </el-button>
     </div>
 </template>
 
@@ -59,7 +76,7 @@ const goToFinish = () => {
 </script>
 
 <style scoped>
-@import "../styles/mainLayout.css";
+@import "../assets/css/style.css";
 
 .rest-match-box {
     background-color: brown;
