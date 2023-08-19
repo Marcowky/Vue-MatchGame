@@ -7,7 +7,9 @@
             <el-button class="small-button" @click=changeCount(false)>
                 <el-text class="small-button-text middle-text">-</el-text>
             </el-button>
-            <el-text class="middle-text">{{ matchCount }}</el-text>
+            <el-button class="match-count-button" disabled>
+                <el-text class="big-button-text middle-text" >{{ matchCount }}</el-text>
+            </el-button>
             <el-button class="small-button" @click=changeCount(true)>
                 <el-text class="small-button-text middle-text">+</el-text>
             </el-button>
@@ -82,13 +84,18 @@ const goToGaming = () => {
 
 .match-choose-box {}
 
-.add-match-button {}
-
-.reduce-match-button {}
-
-.goto-gaming-button {}
-
 .nienie-first-button {}
 
 .nene-first-button {}
+
+.match-count-button:disabled {
+    width: 160px;
+    height: 70px;
+    background-image: url('../assets/images/big-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
 </style>

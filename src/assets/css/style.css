@@ -24,17 +24,17 @@
 }
 
 .big-text {
-    /* font-family: 'MyFont'; */
+    font-family: 'MyFont';
     font-size: 40px;
 }
 
 .middle-text {
-    /* font-family: 'MyFont'; */
+    font-family: 'MyFont';
     font-size: 30px;
 }
 
 .small-text {
-    /* font-family: 'MyFont'; */
+    font-family: 'MyFont';
     font-size: 20px;
 }
 
@@ -47,7 +47,6 @@
     background-position: center;
     border: none;
     background-color: transparent;
-    line-height: 20;
 }
 
 .small-button:active {
@@ -55,11 +54,11 @@
 }
 
 .small-button-text {
-    margin-bottom: 5px; 
+    margin-bottom: 7px; 
 }
 
 .big-button {
-    width: 250px;
+    width: 160px;
     height: 70px;
     background-image: url('../images/big-button.png');
     background-size: contain;
@@ -73,6 +72,7 @@
     background-image: url('../images/big-button-press.png');
 }
 
+
 .big-button-text {
-    margin-bottom: 10px; 
+    margin-bottom: 13px; 
 }
