@@ -7,35 +7,38 @@
 
 .info-box {
     height: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
 }
 
 .func-box {
     /* height: 50%; */
     width: 100%;
+    justify-content: flex-start;
+}
+
+.center-box {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
 }
 
 .big-text {
     font-family: 'MyFont';
     font-size: 40px;
+    color: #634f3b;
 }
 
 .middle-text {
     font-family: 'MyFont';
     font-size: 30px;
+    color: #634f3b;
 }
 
 .small-text {
     font-family: 'MyFont';
     font-size: 20px;
+    color: #634f3b;
 }
 
 .small-button {
@@ -75,4 +78,59 @@
 
 .big-button-text {
     margin-bottom: 13px; 
+}
+
+.nienie-button {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-image: url('../images/nienie.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+
+.nienie-button-active {
+    background-image: url('../images/nienie-press.png');
+}
+
+.nene-button {
+    width: 120px;
+    height: 150px;
+    margin: 10px;
+    background-image: url('../images/nene.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+
+.nene-button-active {
+    background-image: url('../images/nene-press.png');
+}
+
+.arrow{
+    background-image: url('../images/arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.arrow-left {
+    margin-right: 130px;
+    margin-left: 15px;
+}
+
+.arrow-none {
+    width: 24px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+.arrow-box {
+    height: 25px;
 }

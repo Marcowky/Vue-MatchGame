@@ -1,11 +1,13 @@
 <template>
-    <div class="info-box">
-        <div class="status-box">
-            <el-text class="big-text"> 赢! win! </el-text>
-        </div>
+    <div class="center-box info-box">
+        <el-button :class="{ 'nienie-button': true }" v-if="nieniewin == 1"></el-button>
+        <el-button :class="{ 'nene-button': true }" v-else></el-button>
     </div>
-    <div class="func-box">
-        <el-button class="big-button" @click=goToInit>
+    <div class="center-box">
+        <el-text class="big-text"> 赢! win! </el-text>
+    </div>
+    <div class="center-box func-box">
+        <el-button class="big-button" style="margin-top: 40px;" @click=goToInit>
             <el-text class="big-button-text middle-text"> 再来一把! </el-text>
         </el-button>
     </div>
@@ -26,12 +28,4 @@ const goToInit = () => {
  
 <style scoped>
 @import "../assets/css/style.css";
-
-.status-box {
-    background-color: brown;
-    height: 100px;
-    width: 100%;
-}
-
-.goto-init-button {}
 </style>
