@@ -9,14 +9,14 @@
 
             在2022年的冬天，我第一次前往冰岛，却未曾料到梦乡会变成梦魇。我们落地冰岛的第一天，就目睹了12月的初雪，同时也是暴风雪。我们乘坐的航班由于天气原因延误5小时，落地机场后又因为封路被困在机场3小时，就这样在机场虚晃了一天。
         </el-text>
+        <el-button class="big-button" @click=goToInit style="margin-bottom: 80px; margin-top: 10px;">
+            <el-text class="big-button-text middle-text"> 回到游戏! </el-text>
+        </el-button>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { router } from '../routes/router'// 导入路由
-
-const page = ref(router.currentRoute.value.query.page)
 
 const goToInit = () => {
     router.push({
@@ -27,12 +27,9 @@ const goToInit = () => {
 
 <style scoped>
 .secret-text {
-    width: 80%;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    height: 200px;
-    /* Set the desired height */
+    width: 77%;
+    margin-top: 40px;
+    height: 60vh;
     overflow: auto;
-    /* Add scrollbars when content overflows */
 }
 </style>

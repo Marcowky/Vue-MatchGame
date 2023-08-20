@@ -35,7 +35,7 @@ const goToSecret = () => {
 <style scoped>
 .secret-button {
     position: absolute;
-    top: -133px;
+    top: -100px;
     right: 20px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="center-box main-box">
-    <div class="tltle" />
+    <div class="tltle" v-if="showTitle"/>
     <div class="context-box">
       <router-view />
     </div>
@@ -8,7 +8,21 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { router } from './routes/router'// 导入路由
 
+const showTitle = ref(router.currentRoute.value.path != "/secret");
+
+router.beforeEach((to, from) => {
+    if(to !=from) {
+      window.scrollTo(0, 0);
+    }
+    if (to.path.startsWith('/secret')) {
+        showTitle.value = false;
+    } else {
+        showTitle.value = true;
+    }
+})
 </script>
 
 <style scoped>
@@ -21,8 +35,8 @@
 }
 
 .context-box {
-  position: absolute;
-  top: 25%;
+  position: relative;
+  top: 20px;
   width: 100%;
   background-image: url("./assets/images/context.png");
   background-size: 100% 100%;
@@ -30,8 +44,8 @@
 }
 
 .tltle {
-  position: absolute;
-  top: 2%;
+  position: relative;
+  top: 15px;
   width: 300px;
   height: 163px;
   background-image: url("./assets/images/title.png");

@@ -6,9 +6,9 @@
 }
 
 .info-box {
-    height: 50%;
+    /* height: 210px; */
     justify-content: flex-end;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .func-box {
