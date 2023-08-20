@@ -36,7 +36,7 @@ router.beforeEach((to, from) => {
 
 .context-box {
   position: relative;
-  top: 12px;
+  top: 10px;
   width: 100%;
   background-image: url("./assets/images/context.png");
   background-size: 100% 100%;
@@ -45,7 +45,7 @@ router.beforeEach((to, from) => {
 
 .tltle {
   position: relative;
-  top: 7px;
+  top: 5px;
   width: 300px;
   height: 163px;
   background-image: url("./assets/images/title.png");
