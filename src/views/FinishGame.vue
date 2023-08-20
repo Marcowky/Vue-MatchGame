@@ -1,4 +1,5 @@
 <template>
+     <el-button class="secret-button" round color="#f0dbed" @click=goToSecret></el-button>
     <div class="center-box info-box">
         <el-button :class="{ 'nienie-button': true }" v-if="nieniewin == 1"></el-button>
         <el-button :class="{ 'nene-button': true }" v-else></el-button>
@@ -24,7 +25,17 @@ const goToInit = () => {
         path: "/initgame"
     })
 }
+const goToSecret = () => {
+    router.push({
+        path: "/secret"
+    })
+}
 </script>
  
 <style scoped>
+.secret-button {
+    position: absolute;
+    top: -133px;
+    right: 20px;
+}
 </style>
