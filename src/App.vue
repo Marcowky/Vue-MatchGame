@@ -29,7 +29,7 @@ router.beforeEach((to, from) => {
 .main-box {
   height: 96vh;
   background-image: url("./assets/images/background.png");
-  background-size: contain;
+  background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
 }
