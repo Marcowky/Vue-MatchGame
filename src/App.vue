@@ -13,10 +13,11 @@
 
 <style scoped>
 .main-box {
-  height: 100vh;
+  height: 96vh;
   background-image: url("./assets/images/background.png");
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 .context-box {
@@ -30,7 +31,7 @@
 
 .tltle {
   position: absolute;
-  top: 5%;
+  top: 2%;
   width: 300px;
   height: 163px;
   background-image: url("./assets/images/title.png");

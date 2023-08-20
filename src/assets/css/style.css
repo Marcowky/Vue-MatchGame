@@ -59,7 +59,7 @@
 }
 
 .small-button-text {
-    margin-bottom: 7px; 
+    margin-bottom: 7px;
 }
 
 .big-button {
@@ -74,12 +74,11 @@
 }
 
 .big-button:active {
-    background-image: url('../images/big-button-press.png');
+    outline: none;
 }
 
-
 .big-button-text {
-    margin-bottom: 13px; 
+    margin-bottom: 13px;
 }
 
 .nienie-button {
@@ -114,7 +113,7 @@
     background-image: url('../images/nene-press.png');
 }
 
-.arrow{
+.arrow {
     background-image: url('../images/arrow.png');
     background-size: contain;
     background-repeat: no-repeat;
