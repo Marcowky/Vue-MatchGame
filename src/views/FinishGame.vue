@@ -1,5 +1,5 @@
 <template>
-     <el-button class="secret-button" round color="#f0dbed" @click=goToSecret></el-button>
+    <el-button class="secret-button" round color="#f0dbed" @click=goToSecret></el-button>
     <div class="center-box info-box">
         <el-button :class="{ 'nienie-button': true }" v-if="nieniewin == 1"></el-button>
         <el-button :class="{ 'nene-button': true }" v-else></el-button>

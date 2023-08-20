@@ -8,7 +8,6 @@ let routes = [
     { path: "/secret", component: () => import("../views/Secret.vue") }
 ]
 
-
 const router = createRouter({
     history: createWebHistory(),
     routes,

@@ -9,7 +9,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { router } from './routes/router'// 导入路由
+import { router } from './routes/router'
 
 const showTitle = ref(router.currentRoute.value.path != "/secret");
 
@@ -51,9 +51,5 @@ router.beforeEach((to, from) => {
   background-image: url("./assets/images/title.png");
   background-size: 100% 100%;
   background-position: center;
-}
-
-el-button {
-  touch-action: manipulation;
 }
 </style>

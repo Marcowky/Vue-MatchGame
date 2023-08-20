@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { router } from '../routes/router'// 导入路由
+import { router } from '../routes/router'
 
 const goToInit = () => {
     router.push({

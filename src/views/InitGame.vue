@@ -19,18 +19,18 @@
         </div>
     </div>
     <div class="center-box func-box">
-        
+
         <div class="center-box arrow-box">
             <div>
-                <el-button :class="{ 'arrow': nieniestart==1, 'arrow-none': true, 'arrow-left': true }"></el-button>
+                <el-button :class="{ 'arrow': nieniestart == 1, 'arrow-none': true, 'arrow-left': true }"></el-button>
                 <span class="space"></span>
-                <el-button :class="{ 'arrow': nieniestart==0, 'arrow-none': true }"></el-button>
+                <el-button :class="{ 'arrow': nieniestart == 0, 'arrow-none': true }"></el-button>
             </div>
         </div>
         <div>
-            <el-button :class="{ 'nienie-button-active': nieniestart==1, 'nienie-button': true }"
+            <el-button :class="{ 'nienie-button-active': nieniestart == 1, 'nienie-button': true }"
                 @click="chooseFirst(1)"></el-button>
-            <el-button :class="{ 'nene-button-active': nieniestart==0, 'nene-button': true }"
+            <el-button :class="{ 'nene-button-active': nieniestart == 0, 'nene-button': true }"
                 @click="chooseFirst(0)"></el-button>
         </div>
         <el-button class="big-button" @click=goToGaming>
@@ -69,12 +69,10 @@ const goToGaming = () => {
 
 <style scoped>
 .please-choose-box {
-    /* background-color:cornflowerblue; */
     margin: 10px;
 }
 
 .who-first-box {
-    /* background-color:cornflowerblue; */
     margin-top: 10px;
 }
 
