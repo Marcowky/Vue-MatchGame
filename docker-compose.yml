@@ -1,6 +1,6 @@
 services:
-  web:
-    image: web:latest
+  matchgame:
+    image: matchgame:latest
     build: .
     ports:
       - 711:711
