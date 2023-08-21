@@ -1,11 +1,11 @@
 <template>
-    <el-button class="secret-button" round color="#f0dbed" @click=goToSecret></el-button>
     <div class="center-box info-box">
         <el-button :class="{ 'nienie-button': true }" v-if="nieniewin == 1"></el-button>
         <el-button :class="{ 'nene-button': true }" v-else></el-button>
     </div>
     <div class="center-box">
         <el-text class="big-text"> 赢! win! </el-text>
+        <el-button class="secret-button" round color="#ffefcd" @click=goToSecret></el-button>
     </div>
     <div class="center-box func-box">
         <el-button class="big-button" style="margin-top: 40px;" @click=goToInit>
@@ -35,7 +35,6 @@ const goToSecret = () => {
 <style scoped>
 .secret-button {
     position: absolute;
-    top: -100px;
-    right: 20px;
+    left: 300px;
 }
 </style>

@@ -16,7 +16,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { router } from '../routes/router'
 
 const goToInit = () => {
